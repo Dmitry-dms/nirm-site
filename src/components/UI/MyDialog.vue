@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog" v-if="show" @click.stop="hideDialog">
+  <div class="dialog"  v-if="show" @click.stop="hideDialog">
       <div @click.stop class="dialog__content">
           <slot>
 
@@ -9,10 +9,20 @@
 </template>
 
 <script>
-import toggleMixin from "@/mixins/toggleMixin"
+
 export default {
   name: "my-dialog",
-  mixins: [toggleMixin]
+  props: {
+    show : {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    hideDialog() {
+      this.$emit("update:show", false)
+    }
+  }
 };
 </script>
 
@@ -30,8 +40,8 @@ export default {
     margin: auto;
     background: white;
     border-radius: 12px;
-    min-height: 50px;
-    min-width: 300px;
+    min-height: 300px;
+    min-width: 600px;
     padding: 20px;
 }
 </style>
