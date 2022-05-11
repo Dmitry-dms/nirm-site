@@ -1,19 +1,11 @@
-# nirm
+# Графический интерфейс для взаимодействия с сервисом проверки клиентов по Перечню в целях ПОД/ФТ
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
+### Сборка
 ```
 npm run build
 ```
+Созданную директорию dist необходимо переместить в директорию с исполняемым файлом [сервиса](https://github.com/Dmitry-dms/nirs).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
